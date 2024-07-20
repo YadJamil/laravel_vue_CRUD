@@ -148,7 +148,7 @@ const updateOrdering = (column) => {
 
 
 onMounted(() => {
-    getPosts(2);
+    getPosts(1);
     getCategories();
 });
 
