@@ -19,6 +19,7 @@ class PostFactory extends Factory
         return [
             'title'       => $this->faker->word(),
             'content'     => $this->faker->paragraphs(asText: true),
+            'category_id' => \App\Models\Category::factory(),
         ];
     }
 }
