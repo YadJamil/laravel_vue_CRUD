@@ -66,6 +66,21 @@
             </div>
         </div>
 
+
+        <!-- Thumbnail -->
+        <div class="mt-4">
+            <label for="thumbnail" class="block font-medium text-sm text-gray-700">
+                Thumbnail
+            </label>
+            <input @change="post.thumbnail = $event.target.files[0]" type="file" id="thumbnail" />
+            <div class="text-red-600 mt-1">
+                <div v-for="message in validationErrors?.thumbnail">
+                    {{ message }}
+                </div>
+            </div>
+        </div>
+
+
         <!-- Buttons -->
         <div class="mt-4">
             <button
@@ -95,6 +110,7 @@ const post = reactive({
     title: "",
     content: "",
     category_id: "",
+    thumbnail: '' 
 });
 
 onMounted(() => {
